@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;apptheme&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout style-name="crud-template" spacing="false" responsive size-full margin="false">
+   <vaadin-horizontal-layout style-name="top-bar" spacing="false" width-full height="50px">
+    <vaadin-horizontal-layout spacing="false" width-full :middle :expand>
+     <vaadin-text-field icon="fonticon://FontAwesome/f002" style-name="small inline-icon search" id="search" placeholder="Rechercher par nom" width-full _id="search"></vaadin-text-field>
+    </vaadin-horizontal-layout>
+    <vaadin-button icon="fonticon://FontAwesome/f067" style-name="borderless" id="add" plain-text _id="add" :middle :right>
+      Créer un nouveau projet 
+    </vaadin-button>
+   </vaadin-horizontal-layout>
+   <vaadin-css-layout style-name="content" size-full :expand>
+    <vaadin-css-layout style-name="list" id="listParent" width="1444px" height-full _id="listParent">
+     <vaadin-grid id="list" width="1442px" height-full data-item-type="net.planeteronde.bernard.backend.data.entity.Projet" _id="list">
+      <table>
+       <colgroup>
+        <col column-id="nom" sortable>
+        <col column-id="filiale" sortable>
+        <col column-id="loB" sortable>
+        <col column-id="subLoB" sortable>
+        <col column-id="client" sortable>
+        <col column-id="typeOuvrage" sortable>
+       </colgroup>
+       <thead>
+        <tr default>
+         <th plain-text column-ids="nom">Nom</th>
+         <th plain-text column-ids="filiale">Filiale</th>
+         <th plain-text column-ids="loB">LoB</th>
+         <th plain-text column-ids="subLoB">SubLoB</th>
+         <th plain-text column-ids="client">Client</th>
+         <th plain-text column-ids="typeOuvrage">TypeOuvrage</th>
+        </tr>
+       </thead>
+       <tbody></tbody>
+      </table>
+     </vaadin-grid>
+    </vaadin-css-layout>
+    <vaadin-vertical-layout visible="false" enabled="false" style-name="inspect" spacing="false" id="form" size-full margin="false" _id="form">
+     <vaadin-css-layout style-name="edit" size-full :expand>
+      <vaadin-css-layout style-name="section half" width-full>
+       <vaadin-text-field caption="Nom du projet" style-name="small" id="nom" width-full _id="nom"></vaadin-text-field>
+      </vaadin-css-layout>
+      <vaadin-css-layout style-name="section half" width-full>
+       <vaadin-text-field caption="Montant" style-name="small" id="price" width-full _id="montant"></vaadin-text-field>
+      </vaadin-css-layout>
+      <vaadin-css-layout>
+       <vaadin-text-field caption="Filiale" id="filiale" width-full _id="filiale"></vaadin-text-field>
+      </vaadin-css-layout>
+     </vaadin-css-layout>
+     <vaadin-horizontal-layout style-name="buttons border-top" width-full height="50px">
+      <vaadin-button style-name="small primary" id="update" plain-text _id="update" :middle>
+        Update 
+      </vaadin-button>
+      <vaadin-button style-name="small" id="cancel" plain-text _id="cancel" :middle :center>
+        Cancel 
+      </vaadin-button>
+      <vaadin-button style-name="small danger" id="delete" plain-text _id="delete" :middle :right :expand>
+        Delete 
+      </vaadin-button>
+     </vaadin-horizontal-layout>
+    </vaadin-vertical-layout>
+   </vaadin-css-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;apptheme&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+  <meta name="package-mapping" content="net_planeteronde_bernard_ui_view_signaletique:net.planeteronde.bernard.ui.view.signaletique">
+ </head>
+ <body>
+  <vaadin-grid-layout width="1500px" height="1000px" margin>
+   <row>
+    <column>
+     <vaadin-vertical-layout width-auto height="50px" margin="false">
+      <vaadin-text-field caption="Nom du projet" _id="nom"></vaadin-text-field>
+     </vaadin-vertical-layout>
+    </column>
+    <column></column>
+    <column>
+     <vaadin-vertical-layout width-auto height="50px" margin="false">
+      <vaadin-button plain-text _id="annuler">
+        Annuler 
+      </vaadin-button>
+     </vaadin-vertical-layout>
+    </column>
+   </row>
+   <row>
+    <column>
+     <vaadin-vertical-layout width="450px" height="250px" margin="false">
+      <vaadin-text-area caption="Descriptif" width="450px" height="230px"></vaadin-text-area>
+     </vaadin-vertical-layout>
+    </column>
+    <column>
+     <vaadin-vertical-layout width-auto height="250px" margin="false">
+      <vaadin-combo-box placeholder="filiale" data-item-type="net.planeteronde.bernard.backend.data.entity.Projet.Filiale" data-property-id="filiale" _id="filiale"></vaadin-combo-box>
+      <vaadin-text-field caption="Source" height="37px" _id="source"></vaadin-text-field>
+      <vaadin-combo-box caption="Client/Investisseur" data-item-type="net.planeteronde.bernard.backend.data.entity.Projet.Client" _id="client"></vaadin-combo-box>
+      <vaadin-text-field caption="Architecte" _id="architecte"></vaadin-text-field>
+     </vaadin-vertical-layout>
+    </column>
+    <column>
+     <vaadin-vertical-layout width-auto height="250px" margin="false">
+      <vaadin-combo-box caption="Métier" data-item-type="net.planeteronde.bernard.backend.data.entity.Projet.Metier" _id="metier"></vaadin-combo-box>
+      <vaadin-combo-box caption="LoB" data-item-type="net.planeteronde.bernard.backend.data.entity.Projet.LoB" _id="lob"></vaadin-combo-box>
+      <vaadin-combo-box caption="Sub Lob" data-item-type="net.planeteronde.bernard.backend.data.entity.Projet.SubLoB" _id="subLob"></vaadin-combo-box>
+      <vaadin-combo-box caption="Type Ouvrage" data-item-type="net.planeteronde.bernard.backend.data.entity.Projet.TypeOuvrage" _id="typeOuvrage"></vaadin-combo-box>
+     </vaadin-vertical-layout>
+    </column>
+   </row>
+   <row>
+    <column>
+     <vaadin-vertical-layout size-auto margin="false">
+      <vaadin-text-field caption="Montant du marché" _id="montant_marche"></vaadin-text-field>
+      <vaadin-text-field caption="Délai client prévu (en mois)" _id="delai_client"></vaadin-text-field>
+     </vaadin-vertical-layout>
+    </column>
+    <column>
+     <vaadin-vertical-layout size-auto margin="false">
+      <vaadin-date-field caption="Date de la signature" _id="date_signature"></vaadin-date-field>
+      <vaadin-text-field caption="Délai technique prévu (mois)" _id="delai_technique_prevu"></vaadin-text-field>
+     </vaadin-vertical-layout>
+    </column>
+    <column>
+     <vaadin-vertical-layout size-auto margin="false">
+      <vaadin-date-field caption="Date d'ouverture" _id="date_ouverture"></vaadin-date-field>
+      <vaadin-date-field caption="Date de fin de travaux" _id="date_fin"></vaadin-date-field>
+     </vaadin-vertical-layout>
+    </column>
+   </row>
+   <row>
+    <column>
+     <vaadin-vertical-layout width-auto height="250px" margin="false">
+      <vaadin-label plain-text>
+        Directeur BU 
+      </vaadin-label>
+      <vaadin-text-field caption="Nom" _id="nom_dir_BU"></vaadin-text-field>
+      <vaadin-text-field caption="Prénom" _id="prenom_dir_BU"></vaadin-text-field>
+      <vaadin-text-field caption="Email" _id="email_dir_BU"></vaadin-text-field>
+     </vaadin-vertical-layout>
+    </column>
+    <column>
+     <vaadin-vertical-layout width-auto height="250px" margin="false">
+      <vaadin-label plain-text>
+        Chargé d'affaire 
+      </vaadin-label>
+      <vaadin-text-field caption="Nom" _id="nom_chage_aff"></vaadin-text-field>
+      <vaadin-text-field caption="Prénom" _id="prenom_charge_aff"></vaadin-text-field>
+      <vaadin-text-field caption="Email" _id="email_charge_aff"></vaadin-text-field>
+     </vaadin-vertical-layout>
+    </column>
+    <column>
+     <vaadin-vertical-layout width-auto height="250px" margin="false">
+      <vaadin-label plain-text>
+        Responsable conception 
+      </vaadin-label>
+      <vaadin-text-field caption="Nom" _id="nom_resp_conc"></vaadin-text-field>
+      <vaadin-text-field caption="Prénom" _id="prenom_resp_conc"></vaadin-text-field>
+      <vaadin-text-field caption="Email" _id="email_resp_conc"></vaadin-text-field>
+     </vaadin-vertical-layout>
+    </column>
+    <column>
+     <vaadin-vertical-layout width-auto height="250px" margin="false">
+      <vaadin-label plain-text>
+        Responsable Sav 
+      </vaadin-label>
+      <vaadin-text-field caption="Nom" _id="nom_resp_sav"></vaadin-text-field>
+      <vaadin-text-field caption="Prénom" _id="prenom_resp_sav"></vaadin-text-field>
+      <vaadin-text-field caption="Email" _id="email_resp_sav"></vaadin-text-field>
+     </vaadin-vertical-layout>
+    </column>
+   </row>
+   <row></row>
+   <row>
+    <column>
+     <vaadin-vertical-layout size-auto>
+      <vaadin-button plain-text _id="enregistrer">
+        Enregistrer 
+      </vaadin-button>
+     </vaadin-vertical-layout>
+    </column>
+    <column colspan="2"></column>
+    <column>
+     <vaadin-vertical-layout size-auto>
+      <vaadin-button plain-text _id="supprimer">
+        Supprimer 
+      </vaadin-button>
+     </vaadin-vertical-layout>
+    </column>
+   </row>
+  </vaadin-grid-layout>
+ </body>
+</html>
